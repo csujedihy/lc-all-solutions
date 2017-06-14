@@ -9,6 +9,7 @@ __pycache__/
 # JSON
 *.json
 
+.DS_Store
 
 # Distribution / packaging
 .Python
