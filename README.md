@@ -5,6 +5,8 @@ Language: python
 
 Last updated: 2017-06-13
 
+![progress](http://progressed.io/bar/100?title=Accepted)
+
 I've solved 547/547 problems (101 problems for a fee).
 
 The source code was fetched using the tool [leetcode-spider](https://github.com/Ma63d/leetcode-spider).
