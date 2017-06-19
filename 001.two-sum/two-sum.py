@@ -6,11 +6,8 @@ class Solution(object):
         :rtype: List[int]
         """
         d = {}
-        for i in xrange(0, len(nums)):
-            if target - nums[i] in d:
-                return d[target - nums[i]], i
-            if nums[i] not in d:
-                d[nums[i]] = i
-            
-            
-            
+        for i, num in enumerate(nums):
+            if target - num in d:
+                return d[target - num], i
+            if num not in d:
+                d[num] = i
