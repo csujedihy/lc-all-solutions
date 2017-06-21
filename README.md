@@ -3,9 +3,8 @@ This is my leetcode solution folder.
 
 Language: python
 
-Last updated: 2017-06-20
+Last updated: 2017-06-21
 
-I've solved 9/551 problems (101 problems for a fee).
 
 The source code was fetched using the tool [leetcode-spider](https://github.com/Ma63d/leetcode-spider).
 
@@ -560,3 +559,5 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |617|[merge-two-binary-trees](https://leetcode.com/problems/merge-two-binary-trees/)| [python](./617.merge-two-binary-trees/merge-two-binary-trees.py)| Easy|
 |621|[task-scheduler](https://leetcode.com/problems/task-scheduler/)| [python](./621.task-scheduler/task-scheduler.py)| Medium|
 |623|[add-one-row-to-tree](https://leetcode.com/problems/add-one-row-to-tree/)| [python](./623.add-one-row-to-tree/add-one-row-to-tree.py)| Medium|
+|624|[maximum-distance-in-arrays](https://leetcode.com/problems/maximum-distance-in-arrays/)| [python](./624.maximum-distance-in-arrays/maximum-distance-in-arrays.py)| Easy|
+|625|[minimum-factorization](https://leetcode.com/problems/minimum-factorization/)| [python](./625.minimum-factorization/minimum-factorization.py)| Medium|
