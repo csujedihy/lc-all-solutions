@@ -3,9 +3,9 @@ This is my leetcode solution folder.
 
 Language: python
 
-Last updated: 2017-06-13
+Last updated: 2017-06-20
 
-I've solved 547/547 problems (101 problems for a fee).
+I've solved 9/551 problems (101 problems for a fee).
 
 The source code was fetched using the tool [leetcode-spider](https://github.com/Ma63d/leetcode-spider).
 
@@ -14,7 +14,7 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |001|[two-sum](https://leetcode.com/problems/two-sum/)| [python](./001.two-sum/two-sum.py)| Easy|
 |002|[add-two-numbers](https://leetcode.com/problems/add-two-numbers/)| [python](./002.add-two-numbers/add-two-numbers.py)| Medium|
 |003|[longest-substring-without-repeating-characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| [python](./003.longest-substring-without-repeating-characters/longest-substring-without-repeating-characters.py)| Medium|
-|004|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[python](./004.median-of-two-sorted-arrays/median-of-two-sorted-arrays.py)| hard|
+|004|[median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|| hard|
 |005|[longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/)| [python](./005.longest-palindromic-substring/longest-palindromic-substring.py)| Medium|
 |006|[zigzag-conversion](https://leetcode.com/problems/zigzag-conversion/)| [python](./006.zigzag-conversion/zigzag-conversion.py)| Medium|
 |007|[reverse-integer](https://leetcode.com/problems/reverse-integer/)| [python](./007.reverse-integer/reverse-integer.py)| Easy|
@@ -170,7 +170,7 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |157|[read-n-characters-given-read4](https://leetcode.com/problems/read-n-characters-given-read4/)| [python](./157.read-n-characters-given-read4/read-n-characters-given-read4.py)| Easy|
 |158|[read-n-characters-given-read4-ii-call-multiple-times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)| [python](./158.read-n-characters-given-read4-ii-call-multiple-times/read-n-characters-given-read4-ii-call-multiple-times.py)| hard|
 |159|[longest-substring-with-at-most-two-distinct-characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)| [python](./159.longest-substring-with-at-most-two-distinct-characters/longest-substring-with-at-most-two-distinct-characters.py)| hard|
-|160|[intersection-of-two-linked-lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[python](./160.intersection-of-two-linked-lists/intersection-of-two-linked-lists.py)| Easy|
+|160|[intersection-of-two-linked-lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|| Easy|
 |161|[one-edit-distance](https://leetcode.com/problems/one-edit-distance/)| [python](./161.one-edit-distance/one-edit-distance.py)| Medium|
 |162|[find-peak-element](https://leetcode.com/problems/find-peak-element/)| [python](./162.find-peak-element/find-peak-element.py)| Medium|
 |163|[missing-ranges](https://leetcode.com/problems/missing-ranges/)| [python](./163.missing-ranges/missing-ranges.py)| Medium|
@@ -558,3 +558,5 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |611|[valid-triangle-number](https://leetcode.com/problems/valid-triangle-number/)| [python](./611.valid-triangle-number/valid-triangle-number.py)| Medium|
 |616|[add-bold-tag-in-string](https://leetcode.com/problems/add-bold-tag-in-string/)| [python](./616.add-bold-tag-in-string/add-bold-tag-in-string.py)| Medium|
 |617|[merge-two-binary-trees](https://leetcode.com/problems/merge-two-binary-trees/)| [python](./617.merge-two-binary-trees/merge-two-binary-trees.py)| Easy|
+|621|[task-scheduler](https://leetcode.com/problems/task-scheduler/)| [python](./621.task-scheduler/task-scheduler.py)| Medium|
+|623|[add-one-row-to-tree](https://leetcode.com/problems/add-one-row-to-tree/)| [python](./623.add-one-row-to-tree/add-one-row-to-tree.py)| Medium|
