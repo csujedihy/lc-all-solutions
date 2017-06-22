@@ -4,28 +4,24 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        maxlen = 0
-        maxcoord = None
-        for i in xrange(0, len(s)):
-            if 2*(len(s) - i) + 1 < maxlen:
+        left = right = 0
+        n = len(s)
+        for i in range(n - 1):
+            if 2 * (n - i) < right - left:
                 break
             l = r = i
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                if r - l + 1> maxlen:
-                    maxlen = r - l + 1
-                    maxcoord = (l, r)
+            while l >= 0 and r < n and s[l] == s[r]:
                 l -= 1
                 r += 1
-            
+            if r - l - 2 > right - left:
+                left = l + 1
+                right = r - 1
             l = i
             r = i + 1
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                if r - l + 1> maxlen:
-                    maxlen = r - l + 1
-                    maxcoord = (l, r)
+            while l >= 0 and r < n and s[l] == s[r]:
                 l -= 1
                 r += 1
-                    
-        
-        return s[maxcoord[0]:maxcoord[1] + 1] if maxcoord else ""
-                
+            if r - l - 2 > right - left:
+                left = l + 1
+                right = r - 1
+        return s[left:right + 1]
