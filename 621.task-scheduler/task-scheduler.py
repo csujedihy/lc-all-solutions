@@ -13,8 +13,7 @@ class Solution(object):
         ans = 0
         d = collections.Counter(tasks)
         for k, v in d.iteritems():
-            heap.append((-v, k))
-        heapq.heapify(heap)
+            heapq.heappush(heap, (-v, k))
 
         while heap:
             count, task = heap[0]

@@ -15,10 +15,11 @@ class Solution(object):
             return 0
         left = self.minDepth(root.left)
         right = self.minDepth(root.right)
-        if left == right == 0:
+        if not left and not right:
             return 1
-        if left == 0:
-            return 1 + right
-        if right == 0:
-            return 1 + left
-        return 1 + min(left, right)
+        elif not left:
+            return right + 1
+        elif not right:
+            return left + 1
+        else:
+            return min(left, right) + 1

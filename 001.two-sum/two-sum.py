@@ -8,6 +8,7 @@ class Solution(object):
         d = {}
         for i, num in enumerate(nums):
             if target - num in d:
-                return d[target - num], i
-            if num not in d:
-                d[num] = i
+                return [d[target - num], i]
+            d[num] = i
+        # no special case handling becasue it's assumed that it has only one solution
+            
