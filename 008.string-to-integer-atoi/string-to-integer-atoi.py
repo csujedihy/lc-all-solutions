@@ -1,30 +1,26 @@
 class Solution(object):
-    def myAtoi(self, str):
+    def myAtoi(self, s):
         """
         :type str: str
         :rtype: int
         """
-        INT_MAX = 2147483647
-        INT_MIN = -2147483648
+        s = s.strip()
+        sign = 1
+        if not s:
+            return 0
+        if s[0] in ["+", "-"]:
+            if s[0] == "-":
+                sign = -1
+            s = s[1:]
         ans = 0
-        str = str.lstrip()
-        signFlag = 1
-        if str and str[0] in ["+", "-"]:
-            if str[0] == "-":
-                signFlag = -1
-            str = str[1:]
-
-        for c in str:
-            if not c.isdigit():
-                if ans == 0:
-                    return ans
+        for c in s:
+            if c.isdigit():
+                ans = ans * 10 + int(c)
+            else:
                 break
-            num = int(c)
-            ans *= 10
-            ans += num
-        ans = ans * signFlag
-        if ans > INT_MAX:
-            ans = INT_MAX
-        if ans < INT_MIN:
-            ans = INT_MIN
+        ans *= sign
+        if ans > 2147483647:
+            return 2147483647
+        if ans < -2147483648:
+            return -2147483648
         return ans
