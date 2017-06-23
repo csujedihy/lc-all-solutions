@@ -1,13 +1,27 @@
 class Solution(object):
+    # normal way
+    def _isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        z = x
+        y = 0
+        while x > 0:
+            y = y * 10 + x % 10
+            x /= 10
+        return z == y
+    
+    # faster way - only computes half of the number
     def isPalindrome(self, x):
         """
         :type x: int
         :rtype: bool
         """
-        res = 0
-        _x = x if x > 0 else -x
-        while _x > 0:
-            res = res * 10 + _x % 10
-            _x /= 10
-        print res, x
-        return res == x
+        if x < 0 or (x != 0 and x % 10 == 0):
+            return False
+        half = 0
+        while x > half:
+            half = half * 10 + x % 10
+            x /= 10
+        return x == half or half / 10 == x
