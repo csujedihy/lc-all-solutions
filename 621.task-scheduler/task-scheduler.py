@@ -1,10 +1,8 @@
 class Solution(object):
-    
     # O(nlogn) greedy to place most popular and distinct tasks first
     # Actually, I don't think this is greedy
     # We always place different tasks in a cycle which will minimize steps
-    # If no different tasks can be placed in a cycle, place an `idle`.
-    
+    # If not different tasks can be placed in a cycle, place an `idle`.
     def _leastInterval(self, tasks, n):
         """
         :type tasks: List[str]
@@ -29,7 +27,6 @@ class Solution(object):
                 heapq.heappush(heap, item)
             ans += heap and n or cnt # == if heap then n else cnt
         return ans
-        
     
     # O(n) # of the most frequent tasks, say longest, will determine the legnth
     # to void counting idle intervals, we count (longest - 1) * (n + 1)
@@ -38,12 +35,11 @@ class Solution(object):
     # less frequent tasks can be always placed in such cycle
     # and it won't cause any conflicts with requirement since even most frequent can be settle
     # finally, return max(# of task, total counted number)
-    
     def leastInterval(self, tasks, n):
         d = collections.Counter(tasks)
         counts = d.values()
         longest = max(counts)
         ans = (longest - 1) * (n + 1)
         for count in counts:
-            ans += count == longest and 1 or 0 # finding ties (one-line trick)
+            ans += count == longest and 1 or 0
         return max(len(tasks), ans)

@@ -7,7 +7,7 @@ class Solution(object):
         left = right = 0
         n = len(s)
         for i in range(n - 1):
-            if 2 * (n - i) < right - left:
+            if 2 * (n - i) + 1 < right - left + 1:
                 break
             l = r = i
             while l >= 0 and r < n and s[l] == s[r]:

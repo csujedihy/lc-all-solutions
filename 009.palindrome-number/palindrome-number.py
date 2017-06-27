@@ -12,7 +12,7 @@ class Solution(object):
             x /= 10
         return z == y
     
-    # faster way - only computes half of the number
+    # faster way
     def isPalindrome(self, x):
         """
         :type x: int
