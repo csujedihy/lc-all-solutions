@@ -3,7 +3,7 @@ This is my leetcode solution folder.
 
 Language: python
 
-Last updated: 2017-06-26
+Last updated: 2017-06-27
 
 The source code was fetched using the tool [leetcode-spider](https://github.com/Ma63d/leetcode-spider).
 
@@ -29,3 +29,5 @@ The source code was fetched using the tool [leetcode-spider](https://github.com/
 |625|[minimum-factorization](https://leetcode.com/problems/minimum-factorization/)| [python](./625.minimum-factorization/minimum-factorization.py)| Medium|
 |628|[maximum-product-of-three-numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)| [python](./628.maximum-product-of-three-numbers/maximum-product-of-three-numbers.py)| Easy|
 |629|[k-inverse-pairs-array](https://leetcode.com/problems/k-inverse-pairs-array/)| [python](./629.k-inverse-pairs-array/k-inverse-pairs-array.py)| Medium|
+|630|[course-schedule-iii](https://leetcode.com/problems/course-schedule-iii/)| [python](./630.course-schedule-iii/course-schedule-iii.py)| Medium|
+|631|[design-excel-sum-formula](https://leetcode.com/problems/design-excel-sum-formula/)| [python](./631.design-excel-sum-formula/design-excel-sum-formula.py)| Hard|
