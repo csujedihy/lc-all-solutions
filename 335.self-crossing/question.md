@@ -12,10 +12,10 @@
 Example 1:
 
 Given x = [2, 1, 1, 2],
-┌───┐
-│   │
-└───┼──>
-    │
+?????
+?   ?
+???????>
+    ?
 
 Return true (self crossing)
 
@@ -25,11 +25,11 @@ Return true (self crossing)
 Example 2:
 
 Given x = [1, 2, 3, 4],
-┌──────┐
-│      │
-│
-│
-└────────────>
+????????
+?      ?
+?
+?
+?????????????>
 
 Return false (not self crossing)
 
@@ -39,9 +39,9 @@ Return false (not self crossing)
 Example 3:
 
 Given x = [1, 1, 1, 1],
-┌───┐
-│   │
-└───┼>
+?????
+?   ?
+?????>
 
 Return true (self crossing)
 

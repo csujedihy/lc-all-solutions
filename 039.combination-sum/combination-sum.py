@@ -5,20 +5,15 @@ class Solution(object):
         :type target: int
         :rtype: List[List[int]]
         """
-        def dfs(nums, target, path, res):
+        def dfs(candidates, start, target, path, res):
             if target == 0:
-                res.append(path + [])
-                return
+                return res.append(path + [])
             
-            for i in xrange(0, len(nums)):
-                if path and nums[i] < path[-1]:
-                    continue
-                if target - nums[i] < 0:
-                    return
-                path.append(nums[i])
-                dfs(nums, target - nums[i], path, res)
-                path.pop()
-        candidates.sort()
+            for i in range(start, len(candidates)):
+                if target - candidates[i] >= 0:
+                    path.append(candidates[i])
+                    dfs(candidates, i, target - candidates[i], path, res)
+                    path.pop()
         res = []
-        dfs(candidates, target, [], res)
+        dfs(candidates, 0, target, [], res)
         return res

@@ -4,22 +4,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        one = two = three = float("-inf")
-        for i in xrange(0, len(nums)):
-            if nums[i] in [one, two, three]:
+        first = second = third = float("-inf")
+        for num in nums:
+            if num in [first, second, third]:
                 continue
-            _one = one
-            _two = two
-            if nums[i] >= one:
-                one = nums[i]
-                two = _one
-                three = _two
-            elif nums[i] >= two:
-                two = nums[i]
-                three = _two
-            elif nums[i] >= three:
-                three = nums[i]
-        return three if three != float("-inf") else one
+            if num > first:
+                third = second
+                second = first
+                first = num
+            elif num > second:
+                third = second
+                second = num
+            elif num > third:
+                third = num
+        return third if third != float("-inf") else first
+                
             
-            
-        

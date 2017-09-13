@@ -15,5 +15,5 @@ class Solution(object):
             if ans and ans[-1].end >= intv.start:
                 ans[-1].end = max(ans[-1].end, intv.end)
             else:
-                ans += intv,
+                ans.append(intv)
         return ans

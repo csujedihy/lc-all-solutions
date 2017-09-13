@@ -6,9 +6,10 @@ class Solution(object):
         """
         buy1 = buy2 = float("-inf")
         sell1 = sell2 = 0
-        for i in xrange(0, len(prices)):
-            buy1 = max(-prices[i], buy1)
-            sell1 = max(buy1 + prices[i], sell1)
+        
+        for i in range(len(prices)):
+            sell1 = max(prices[i] + buy1, sell1)
+            buy1 = max(buy1, -prices[i])
+            sell2 = max(sell2, prices[i] + buy2)
             buy2 = max(sell1 - prices[i], buy2)
-            sell2 = max(buy2 + prices[i], sell2)
-        return sell2
+        return max(sell1, sell2)

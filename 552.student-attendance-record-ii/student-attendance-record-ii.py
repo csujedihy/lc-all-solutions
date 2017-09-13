@@ -11,6 +11,7 @@ class Solution(object):
         for i in range(3, n + 1):
             dp[i] = (dp[i-1] + dp[i-2] + dp[i-3]) % M
         ans = dp[n]
+
         for i in range(1, n + 1):
             ans += (dp[i - 1] * dp[n - i]) % M
             ans %= M

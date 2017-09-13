@@ -9,15 +9,13 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        l, r = 1, n
-        while l < r:
-            m = l + (r - l) / 2
-            if isBadVersion(m):
-                r = m - 1
+        lo = 1
+        hi = n
+        while lo < hi:
+            mid = lo + (hi - lo) / 2
+            if isBadVersion(mid):
+                hi = mid
             else:
-                l = m + 1
+                lo = mid + 1
+        return lo
         
-        if not isBadVersion(r):
-            return r + 1
-        return r
-                

@@ -1,3 +1,7 @@
+# find the largest end element in tails that is smaller than nums[i]
+# and then replace it with nums[i] and discard the list in the same length
+# which is implemented by `tail[idx] = num`
+
 class Solution(object):
     def lengthOfLIS(self, nums):
         """
@@ -5,12 +9,10 @@ class Solution(object):
         :rtype: int
         """
         tail = []
-        for i in xrange(0, len(nums)):
-            idx = bisect.bisect_right(tail, nums[i])
-            if idx - 1 >= 0 and nums[i] == tail[idx - 1]:
-                continue
+        for num in nums:
+            idx = bisect.bisect_left(tail, num)
             if idx == len(tail):
-                tail.append(nums[i])
+                tail.append(num)
             else:
-                tail[idx] = nums[i]
+                tail[idx] = num
         return len(tail)
