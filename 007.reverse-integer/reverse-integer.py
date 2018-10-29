@@ -9,5 +9,5 @@ class Solution(object):
         ans = 0
         while x:
             ans = ans * 10 + x % 10
-            x /= 10
+            x //= 10
         return sign * ans if ans <= 0x7fffffff else 0
