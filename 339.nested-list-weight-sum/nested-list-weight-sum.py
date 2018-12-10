@@ -2,7 +2,7 @@
 # This is the interface that allows for creating nested lists.
 # You should not implement it, or speculate about its implementation
 # """
-#class NestedInteger(object):
+# class NestedInteger(object):
 #    def isInteger(self):
 #        """
 #        @return True if this NestedInteger holds a single integer, rather than a nested list.
@@ -24,19 +24,19 @@
 #        """
 
 class Solution(object):
-    def depthSum(self, nestedList):
-        """
-        :type nestedList: List[NestedInteger]
-        :rtype: int
-        """
-        def helper(root, depth):
-            res = 0
-            for nested in root:
-                if nested.isInteger():
-                    res += depth * nested.getInteger()
-                else:
-                    res += helper(nested.getList(), depth + 1)
-            return res
+  def depthSum(self, nestedList):
+    """
+    :type nestedList: List[NestedInteger]
+    :rtype: int
+    """
 
-        return helper(nestedList, 1)
-        
+    def helper(root, depth):
+      res = 0
+      for nested in root:
+        if nested.isInteger():
+          res += depth * nested.getInteger()
+        else:
+          res += helper(nested.getList(), depth + 1)
+      return res
+
+    return helper(nestedList, 1)

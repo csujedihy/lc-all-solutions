@@ -5,18 +5,18 @@
 #         self.next = None
 
 class Solution(object):
-    def detectCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
-        slow = fast = finder = head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-            if slow == fast:
-                while finder != slow:
-                    finder = finder.next
-                    slow = slow.next
-                return finder
-        return None
+  def detectCycle(self, head):
+    """
+    :type head: ListNode
+    :rtype: ListNode
+    """
+    slow = fast = finder = head
+    while fast and fast.next:
+      slow = slow.next
+      fast = fast.next.next
+      if slow == fast:
+        while finder != slow:
+          finder = finder.next
+          slow = slow.next
+        return finder
+    return None

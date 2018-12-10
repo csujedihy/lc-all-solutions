@@ -20,45 +20,42 @@
 #         """
 
 class PeekingIterator(object):
-    def __init__(self, iterator):
-        """
-        Initialize your data structure here.
-        :type iterator: Iterator
-        """
-        self.iter = iterator
-        self.nextElem = None
+  def __init__(self, iterator):
+    """
+    Initialize your data structure here.
+    :type iterator: Iterator
+    """
+    self.iter = iterator
+    self.nextElem = None
 
-    def peek(self):
-        """
-        Returns the next element in the iteration without advancing the iterator.
-        :rtype: int
-        """
-        if self.nextElem:
-            return self.nextElem
-        if self.iter.hasNext():
-            self.nextElem = self.iter.next()
-        return self.nextElem
-        
-        
+  def peek(self):
+    """
+    Returns the next element in the iteration without advancing the iterator.
+    :rtype: int
+    """
+    if self.nextElem:
+      return self.nextElem
+    if self.iter.hasNext():
+      self.nextElem = self.iter.next()
+    return self.nextElem
 
-    def next(self):
-        """
-        :rtype: int
-        """
-        ret = self.nextElem
-        
-        if self.nextElem:
-            self.nextElem = None
-            return ret
-        
-        return self.iter.next()
+  def next(self):
+    """
+    :rtype: int
+    """
+    ret = self.nextElem
 
-    def hasNext(self):
-        """
-        :rtype: bool
-        """
-        return (self.nextElem is not None) or self.iter.hasNext()
-        
+    if self.nextElem:
+      self.nextElem = None
+      return ret
+
+    return self.iter.next()
+
+  def hasNext(self):
+    """
+    :rtype: bool
+    """
+    return (self.nextElem is not None) or self.iter.hasNext()
 
 # Your PeekingIterator object will be instantiated and called as such:
 # iter = PeekingIterator(Iterator(nums))

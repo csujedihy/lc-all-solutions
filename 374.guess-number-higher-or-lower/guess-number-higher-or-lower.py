@@ -4,19 +4,19 @@
 # def guess(num):
 
 class Solution(object):
-    def guessNumber(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-        l, r = 1, n
-        while l < r:
-            m = l + (r - l)/2
-            g = guess(m)
-            if g == -1:
-                r = m - 1
-            elif g == 1:
-                l = m + 1
-            else:
-                return m
-        return l
+  def guessNumber(self, n):
+    """
+    :type n: int
+    :rtype: int
+    """
+    l, r = 1, n
+    while l < r:
+      m = l + (r - l) / 2
+      g = guess(m)
+      if g == -1:
+        r = m - 1
+      elif g == 1:
+        l = m + 1
+      else:
+        return m
+    return l
