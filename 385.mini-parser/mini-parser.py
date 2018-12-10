@@ -2,7 +2,7 @@
 # This is the interface that allows for creating nested lists.
 # You should not implement it, or speculate about its implementation
 # """
-#class NestedInteger(object):
+# class NestedInteger(object):
 #    def __init__(self, value=None):
 #        """
 #        If value is not specified, initializes an empty list.
@@ -42,37 +42,29 @@
 #        """
 
 class Solution(object):
-    def deserialize(self, s):
-            """
-            :type s: str
-            :rtype: NestedInteger
-            """
-            def parse(s, i):
-                if s[i] == "[":
-                    i += 1
-                    ret = NestedInteger()
-                    while i < len(s):
-                        if s[i] == "]":
-                            return ret, i + 1
-                        elif s[i] in "[-0123456789":
-                            res, i = parse(s, i)
-                            ret.add(res)
-                        else:
-                            i += 1
-                else:
-                    j = i
-                    while j < len(s) and s[j] in "-0123456789":
-                        j += 1
-                    return NestedInteger(int(s[i:j])), j
-            res, _ = parse(s, 0)
-            return res
-    
+  def deserialize(self, s):
+    """
+    :type s: str
+    :rtype: NestedInteger
+    """
 
-            
-            
-        
-        
-        
-        
-        
-        
+    def parse(s, i):
+      if s[i] == "[":
+        i += 1
+        ret = NestedInteger()
+        while i < len(s):
+          if s[i] == "]":
+            return ret, i + 1
+          elif s[i] in "[-0123456789":
+            res, i = parse(s, i)
+            ret.add(res)
+          else:
+            i += 1
+      else:
+        j = i
+        while j < len(s) and s[j] in "-0123456789":
+          j += 1
+        return NestedInteger(int(s[i:j])), j
+
+    res, _ = parse(s, 0)
+    return res

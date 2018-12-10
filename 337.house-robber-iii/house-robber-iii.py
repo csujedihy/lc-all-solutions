@@ -6,16 +6,17 @@
 #         self.right = None
 
 class Solution(object):
-    def rob(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        def dfs(root):
-            if not root:
-                return 0,0
-            lpre, lppre = dfs(root.left)
-            rpre, rppre = dfs(root.right)
-            return max(root.val + lppre + rppre, lpre + rpre), lpre + rpre
-        return dfs(root)[0]
-                
+  def rob(self, root):
+    """
+    :type root: TreeNode
+    :rtype: int
+    """
+
+    def dfs(root):
+      if not root:
+        return 0, 0
+      lpre, lppre = dfs(root.left)
+      rpre, rppre = dfs(root.right)
+      return max(root.val + lppre + rppre, lpre + rpre), lpre + rpre
+
+    return dfs(root)[0]

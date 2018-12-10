@@ -6,17 +6,18 @@
 #         self.right = None
 
 class Solution(object):
-    def __init__(self):
-        self.lSum = 0
-    def convertBST(self, root):
-        """
-        :type root: TreeNode
-        :rtype: TreeNode
-        """
-        if not root:
-            return None
-        self.convertBST(root.right)
-        self.lSum += root.val
-        root.val = self.lSum
-        self.convertBST(root.left)
-        return root
+  def __init__(self):
+    self.lSum = 0
+
+  def convertBST(self, root):
+    """
+    :type root: TreeNode
+    :rtype: TreeNode
+    """
+    if not root:
+      return None
+    self.convertBST(root.right)
+    self.lSum += root.val
+    root.val = self.lSum
+    self.convertBST(root.left)
+    return root

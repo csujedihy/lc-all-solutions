@@ -6,16 +6,17 @@
 #         self.right = None
 
 class Solution(object):
-    def isSymmetric(self, node):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
-        def helper(root, mirror):
-            if not root and not mirror:
-                return True
-            if root and mirror and root.val == mirror.val:
-                return helper(root.left, mirror.right) and helper(root.right, mirror.left)
-            return False
-        return helper(node, node)
-            
+  def isSymmetric(self, node):
+    """
+    :type root: TreeNode
+    :rtype: bool
+    """
+
+    def helper(root, mirror):
+      if not root and not mirror:
+        return True
+      if root and mirror and root.val == mirror.val:
+        return helper(root.left, mirror.right) and helper(root.right, mirror.left)
+      return False
+
+    return helper(node, node)
