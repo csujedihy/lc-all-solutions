@@ -7,7 +7,7 @@ class Solution(object):
     lo = 0
     hi = x
     while lo <= hi:
-      mid = (hi + lo) / 2
+      mid = (hi + lo) // 2
       v = mid * mid
       if v < x:
         lo = mid + 1
