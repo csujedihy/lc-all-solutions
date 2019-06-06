@@ -1,25 +1,20 @@
-class Solution(object):
-  def findLonelyPixel(self, picture):
-    """
-    :type picture: List[List[str]]
-    :rtype: int
-    """
-    ans = 0
-    col = {}
-    row = {}
-    for i in range(len(picture)):
-      for j in range(len(picture[0])):
-        if picture[i][j] == "B":
-          row[i] = row.get(i, 0) + 1
-          col[j] = col.get(j, 0) + 1
+from collections import defaultdict
 
-    for i in range(len(picture)):
-      for j in range(len(picture[0])):
-        if picture[i][j] == "B":
-          if row.get(i, 0) == 1 and col.get(j, 0) == 1:
-            ans += 1
-          elif row.get(i, 0) == 1:
-            continue
-          else:
-            break
-    return ans
+class Solution(object):
+  
+  def findLonelyPixel(self, picture):
+
+      col = defaultdict(int)
+      row = defaultdict(int)
+
+      for i, r in enumerate(picture):
+        for j, pixel in enumerate(r):
+          if pixel == "B":
+            row[i] += 1
+            col[j] += 1
+
+      return sum(
+          1 for i, r in enumerate(picture) 
+          for j, pixel in enumerate(r) 
+          if col[j] == row[i] == 1 and pixel == 'B'
+      )
