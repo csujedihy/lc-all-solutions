@@ -5,6 +5,8 @@
 #         self.next = None
 import heapq
 
+# overwrite the comparison function, so the node can be comparable
+ListNode.__lt__ = lambda x, y: (x.val < y.val)
 
 class Solution(object):
   def mergeKLists(self, lists):
@@ -18,7 +20,7 @@ class Solution(object):
       node = lists[i]
       if not node:
         continue
-      heapq.heappush(heap, (node.val, node))
+      heapq.heappush(heap, node)
 
     while heap:
       value, node = heapq.heappop(heap)
@@ -26,5 +28,5 @@ class Solution(object):
       p = p.next
       if node.next:
         node = node.next
-        heapq.heappush(heap, (node.val, node))
+        heapq.heappush(heap, node)
     return dummy.next
