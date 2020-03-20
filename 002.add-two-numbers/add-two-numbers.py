@@ -16,7 +16,7 @@ class Solution(object):
     carry = 0
     while l1 and l2:
       p.next = ListNode(l1.val + l2.val + carry)
-      carry = p.next.val / 10
+      carry = p.next.val // 10
       p.next.val %= 10
       p = p.next
       l1 = l1.next
@@ -25,7 +25,7 @@ class Solution(object):
     res = l1 or l2
     while res:
       p.next = ListNode(res.val + carry)
-      carry = p.next.val / 10
+      carry = p.next.val // 10
       p.next.val %= 10
       p = p.next
       res = res.next
@@ -39,7 +39,7 @@ class Solution(object):
     carry = 0
     while l1 or l2 or carry:
       val = (l1 and l1.val or 0) + (l2 and l2.val or 0) + carry
-      carry = val / 10
+      carry = val // 10
       p.next = ListNode(val % 10)
       l1 = l1 and l1.next
       l2 = l2 and l2.next
