@@ -1,0 +1,16 @@
+class Solution:
+    def findSecretWord(self, wordlist: List[str], master: 'Master') -> None:
+        def checkdif(a,b):
+            count = 0
+            for i in range(len(a)):
+                if a[i] == b[i]:
+                    count += 1
+            return count
+        while len(wordlist) >= 1:
+            dic = {x:[sum(checkdif(x,y) == k for y in wordlist) for k in range(6)] for x in wordlist}
+            word = [x for x in dic if max(dic[x]) == min(max(x) for x in dic.values())][0]
+            k = master.guess(word)
+            if k == 6:
+                return 
+            else:
+                wordlist = [x for x in wordlist if checkdif(x,word) == k]
